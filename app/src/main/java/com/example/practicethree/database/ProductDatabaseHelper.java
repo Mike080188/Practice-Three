@@ -20,7 +20,6 @@ public class ProductDatabaseHelper extends SQLiteOpenHelper {
   private static final String KEY_NAME = "name";
   private static final String KEY_SELLER = "seller";
   private static final String KEY_PRICE = "price";
-//  private static final String KEY_RATING = "rating";
   private static final String KEY_DESCRIPTION = "description";
 
   public ProductDatabaseHelper(Context context){

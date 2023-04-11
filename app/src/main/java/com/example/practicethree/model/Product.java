@@ -5,16 +5,9 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-import java.util.ArrayList;
 
 public class Product implements Parcelable {
-//    private int year;
-//    private float rating;
-//    private String description;
-//    private String title;
-//    private String category;
 
-//      private String id;
       private String name;
       private String description;
       private String seller;
@@ -22,15 +15,8 @@ public class Product implements Parcelable {
 
     private boolean isSelected = false;
 
-//    public Product(String title, String category, int year, float rating, String description) {
-//        this.title = title;
-//        this.category = category;
-//        this.year = year;
-//        this.rating = rating;
-//        this.description = description;
-//    }
+
     public Product(String name, String seller, float price, String description) {
-//        this.id = id;
         this.name = name;
         this.seller = seller;
         this.price = price;
@@ -38,7 +24,6 @@ public class Product implements Parcelable {
     }
 
     protected Product(Parcel in) {
-//        id = in.readString();
         name = in.readString();
         seller = in.readString();
         price = in.readFloat();
@@ -63,14 +48,6 @@ public class Product implements Parcelable {
     }
 
     /** Getters and Setters */
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-
     public String getName() {
         return name;
     }
@@ -114,7 +91,6 @@ public class Product implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
-//        dest.writeInt(year);
         dest.writeString(name);
         dest.writeString(seller);
         dest.writeFloat(price);

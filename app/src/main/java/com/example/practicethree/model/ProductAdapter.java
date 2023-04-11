@@ -35,7 +35,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.nameTextView.setText(product.getName());
         holder.sellerTextView.setText(product.getSeller());
         holder.priceTextView.setText(String.valueOf(product.getPrice()));
-//        holder.ratingTextView.setText(String.valueOf(product.getRating()));
         holder.descriptionTextView.setText(product.getDescription());
 
         holder.selectItemTextView.setBackgroundColor(product.isSelected() ? Color.CYAN : Color.WHITE);
@@ -54,6 +53,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     public ArrayList<Product> getSelectedProducts() {
+//        Get a list of the products which have been selected
         ArrayList<Product> selectedProducts = new ArrayList<Product>();
 
         for(Product p : products) {
@@ -72,7 +72,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             nameTextView = itemView.findViewById(R.id.nameTextView);
             sellerTextView = itemView.findViewById(R.id.sellerTextView);
             priceTextView = itemView.findViewById(R.id.priceTextView);
-//            ratingTextView = itemView.findViewById(R.id.ratingTextView);
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
             selectItemTextView = itemView.findViewById(R.id.selectItemTextView);
         }
